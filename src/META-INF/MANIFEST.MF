@@ -1,0 +1,14 @@
+Name: TEXT
+Dialog-Specs: TEXT.spd
+Command-Specs: text.xml
+Code-Files: TEXT.py
+Misc-Files: TEXT.html
+Summary: Create a text block in the Viewer, optionally with formatted 
+ text
+Description: The command provides a way in syntax to create a block of
+  text for comments and annotations of the output.  The output can be 
+ plain text, html, or rtf
+Author: JKP, IBM SPSS
+Version: 1.4.1
+Product-Version: 18
+Plugins: Python
