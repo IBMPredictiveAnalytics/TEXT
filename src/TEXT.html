@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=9" >
+
+<title>Create a text block in the Viewer, optionally with formatted text</title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+
+
+
+
+</head>
+
+<body>
+<!-- rmarkdown v1 -->
+
+<h1>Create a text block in the Viewer, optionally with formatted text</h1>
+
+<p>TEXT <em>list of quoted strings</em><br/>
+/OUTLINE 
+HEADING=&ldquo;<em>text</em>&rdquo; TITLE=&ldquo;<em>text</em>&rdquo; PAGEBREAK = NO<sup>&#42;&#42;</sup> or YES</p>
+
+<p>/WRAP WRAP=number</p>
+
+<p>TEXT /HELP displays this text and does nothing else.</p>
+
+<p><sup>&#42;</sup> Required<br/>
+<sup>&#42;&#42;</sup> Default</p>
+
+<p>Example:</p>
+
+<pre><code>TEXT &quot;The following analysis assumes normally distributed residuals&quot;
+&quot;If this assumption is false, confidence intervals may be incorrect.&quot;
+/OUTLINE HEADING=&quot;Attention&quot; TITLE=&#39;Note to Reader&#39;.
+</code></pre>
+
+<p>The text is inserted in a new text block in the Viewer.  Each quoted string is
+a single line.  If no strings are supplied, an empty comment will be created.
+There must be a nonempty dataset open before this command can be used.</p>
+
+<p>Literal concatenation using the standard SPSS convention of <em>+</em> can be
+used, but a <em>-</em> can be used for the same purpose.<br/>
+Using - allows any number of lines to be combined.</p>
+
+<p>If the text appears to be html or rtf, it is inserted as formatted 
+text in the Viewer if running Version 17 or later and in local mode.
+(Newer versions of Statistics may support this functionality in
+distributed mode.)  In this case, all the lines are joined without 
+any separator, so the line separations in the quoted strings does not apply.</p>
+
+<p>The symbol <em>)USER</em> in the text is replaced with the current user name.
+The symbol <em>)CURDATE</em> is replaced with the current date and time.</p>
+
+<h2>OUTLINE</h2>
+
+<p>The text appears under the Outline heading specified in <strong>HEADING</strong>.<br/>
+The default heading is &ldquo;Comment&rdquo;  The specified title appears as 
+the text label in the outline.  <strong>HEADING</strong> and <strong>TITLE</strong> text should be 
+enclosed in quotes.  It also defaults to &ldquo;Comment&rdquo; if inserting a
+formatted text block.</p>
+
+<p>If <strong>PAGEBREAK</strong> = YES, a page break is inserted before the text block.<br/>
+This feature is only available with Version 17 or later running 
+in local mode.</p>
+
+<h2>WRAP</h2>
+
+<p>If the text is not html or rtf, <strong>WRAP</strong> can specify the maximum number
+of characters on a line.  Longer lines will be wrapped at an appropriate
+blank, but if some text has no possible wrap points, it will be allowed
+to be longer.</p>
+
+<p>&copy; Copyright IBM Corp. 1989, 2014</p>
+
+</body>
+
+</html>
+
