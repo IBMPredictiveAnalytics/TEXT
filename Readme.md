@@ -1,11 +1,13 @@
 # TEXT
-## Create a text block in the Viewer, optionally with formatted 
- The command provides a way in syntax to create a block of
+## Create a text block in the Viewer, optionally with formatted text 
+ The command provides a way in syntax to create a block of text for comments and annotations of the output. The output can be plain text, html, or rtf.
 
 ---
 Requirements
 ----
-- IBM SPSS Statistics 18 or later
+- IBM SPSS Statistics 18 or later and the corresponding IBM SPSS Statistics-Integration Plug-in for Python.
+
+Note: For users with IBM SPSS Statistics version 23 or higher, the TEXT extension is installed as part of IBM SPSS Statistics-Essentials for Python.
 
 ---
 Installation intructions
