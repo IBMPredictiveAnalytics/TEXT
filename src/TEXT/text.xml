@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Extension debug="false" version="1.0" xmlns="http://spss.com/clementine/extensions" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://spss.com/clementine/extensions http://xml.spss.com/clementine/extensions/CLEFSpecificationFile.xsd">
+	<ExtensionDetails copyright="Licensed Materials - Property of IBM.  IBM SPSS Products: Statistics Common (C) Copyright IBM Corp. 1989, 2013.  US Government Users Restricted Rights - Use, duplication or  disclosure restricted by GSA ADP Schedule Contract with IBM Corp." description="" id="text" label="" provider="SPSS, Inc." providerTag="spss" version="1.0"/>
+	<Resources>
+		<Bundle id="bundle1" path="text" type="properties"/>
+	</Resources>
+	<CommonObjects>
+		<Actions>
+			<Action id="text_action" imagePath="IBMdialogicon.png" label="Create Text Output" labelKey="text_action.LABEL"/>
+		</Actions>
+	</CommonObjects>
+	<UserInterface>
+		<Controls>
+			<MenuItem action="text_action" offset="12" showIcon="true" spssMenu="Utilities"/>
+		</Controls>
+	</UserInterface>
+	<Node id="text" label="Create Text Output" labelKey="text.LABEL" type="modelBuilder">
+		<Properties>
+			<Property name="text" syntax="TEXT &quot;%%thetext%%&quot;&#10;/OUTLINE HEADING=&quot;%%heading%%&quot;&#10;TITLE=&quot;%%heading%%&quot;&#10;%%wrap%%&#10;"/>
+			<Property description="false" name="text_modal"/>
+			<Property defaultValue="Comment" description="Enter text to appear in the outline and over the text block.  Any &quot; character must be doubled" descriptionKey="heading_tooltip.LABEL" isRequired="true" label="Heading and Title:" labelKey="heading.LABEL" name="heading" syntax="%%ThisValue%%" valueType="string"/>
+			<Property defaultValue="" description="This text will appear as a block in the Viewer.  Any &quot; character must be doubled" descriptionKey="thetext_tooltip.LABEL" isRequired="true" label="Viewer Text Block:" labelKey="thetext.LABEL" name="thetext" syntax="%%ThisValue%%" valueType="string"/>
+			<Property defaultValue="" description="Does not apply to html or rtf text" descriptionKey="wrap_tooltip.LABEL" label="Maximum Line Length:" labelKey="wrap.LABEL" min="1" name="wrap" syntax="/WRAP WRAP=%%ThisValue%%" valueType="integer"/>
+		</Properties>
+		<UserInterface>
+			<Tabs>
+				<Tab helpLink="">
+					<PropertiesPanel>
+						<TextBoxControl mnemonic="H" mnemonicKey="heading_mnemonic.VALUE" property="heading">
+							<Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="0" gridWidth="1" rowWeight="0.0"/>
+						</TextBoxControl>
+						<TextBoxControl mnemonic="T" mnemonicKey="thetext_mnemonic.VALUE" property="thetext">
+							<Layout columnWeight="1.0" fill="horizontal" gridColumn="1" gridRow="0" gridWidth="1" rowWeight="0.0"/>
+						</TextBoxControl>
+						<StaticText text="This dialog requires the Python Essentials" textKey="item_12.LABEL">
+							<Layout columnWeight="1.0" fill="none" gridColumn="0" gridRow="2" gridWidth="1" rowWeight="1.0"/>
+						</StaticText>
+						<StaticText text="You must have a data file open to use this dialog." textKey="item_22.LABEL">
+							<Layout columnWeight="1.0" fill="none" gridColumn="1" gridRow="1" gridWidth="1" rowWeight="0.0"/>
+						</StaticText>
+						<StaticText text="Use )USER in the text to refer to the current user." textKey="item_9.LABEL">
+							<Layout columnWeight="1.0" fill="none" gridColumn="1" gridRow="2" gridWidth="1" rowWeight="0.0"/>
+						</StaticText>
+						<StaticText text="Use )CURDATE to refer to the current date and time." textKey="item_10.LABEL">
+							<Layout columnWeight="1.0" fill="none" gridColumn="1" gridRow="3" gridWidth="1" rowWeight="1.0"/>
+						</StaticText>
+						<TextBoxControl mnemonic="W" mnemonicKey="wrap_mnemonic.VALUE" property="wrap">
+							<Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="1" gridWidth="1" rowWeight="0.0"/>
+						</TextBoxControl>
+						<StaticText text="This dialog was created using a later version of PASW Statistics\nand certain features may not function as intended." textKey="v17_warning.LABEL">
+							<Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="3" gridWidth="1" rowWeight="1.0"/>
+						</StaticText>
+					</PropertiesPanel>
+				</Tab>
+			</Tabs>
+		</UserInterface>
+	</Node>
+</Extension>
