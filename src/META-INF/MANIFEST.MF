@@ -1,4 +1,5 @@
 Name: TEXT
+Display-Name: Create Text Block
 Dialog-Specs: TEXT.spd,text.cfe
 Command-Specs: text.xml
 Code-Files: TEXT.py
