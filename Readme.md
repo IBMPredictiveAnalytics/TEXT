@@ -17,6 +17,30 @@ Installation intructions
 3. Search for the name of the extension and click Ok. Your extension will be available.
 
 ---
+Tutorial
+----
+
+### Installation Location
+
+Utilities →
+
+&nbsp;&nbsp;Create Text Output →
+
+### UI
+<img width="998" alt="image" src="https://user-images.githubusercontent.com/19230800/196513248-b20f4749-b616-441c-8530-6b272a20a97a.png">
+
+### Syntax
+Example:
+
+> TEXT "Hello )USER on )CURDATE" <br />
+> /OUTLINE HEADING="Comment" <br />
+> TITLE="Comment".
+
+### Output
+
+<img width="536" alt="image" src="https://user-images.githubusercontent.com/19230800/196513593-c2591f4c-fb14-4f89-8898-7b2627b1d813.png">
+
+---
 License
 ----
 
