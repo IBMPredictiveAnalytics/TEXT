@@ -1,17 +1,18 @@
-Name: TEXT
-Display-Name: Create Text Block
-Dialog-Specs: TEXT.spd,text.cfe
-Command-Specs: text.xml
-Code-Files: TEXT.py
-Misc-Files: extsyntax.css,TEXT.html,markdown.html
-Summary: Create a text block in the Viewer, optionally with formatted 
- text
-Description: The command provides a way in syntax to create a block of
-  text for comments and annotations of the output.  The output can be 
- plain text, html, or rtf
-Author: JKP, IBM SPSS
-Version: 2.1.0
+Name: STATS TEXTANALYSIS
+Display-Name: Text Analysis
+Dialog-Specs: TextAnalysis.cfe
+Command-Specs: STATS_TEXTANALYSIS.xml
+Code-Files: texta.py,STATS_TEXTANALYSIS.py
+Misc-Files: extsyntax.css,Readme.md,defaultdialogicon.png,Analyzing Su
+ rvey Text.pdf,LICENSE,markdown.html
+Summary: Various facilities for working with text data
+Description: Tools for working with text variables
+Author: Jon K Peck
+Version: 1.3.3
 Product-Version: 24
+Date: 08/02/2022
+Categories: text analysis sentiment spelling
 Plugins: Python
 Python-Version: 3
-Translation-Catalogues: lang
+Python-Modules: pyspellchecker,nltk,certifi
+Extension-Bundles: STATS_PACKAGE_INSTALL,SPSSINC_TRANS
